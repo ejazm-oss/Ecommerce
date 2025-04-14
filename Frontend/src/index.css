@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+body{
+    background-color: #FFFAF3;
+}
+
+.wave {
+  --mask:
+    radial-gradient(41.38px at 58.5px 50%,#000 99%,#0000 101%) 0 calc(50% - 60px)/51% 120px repeat-y,
+    radial-gradient(41.38px at -28.5px 50%,#0000 99%,#000 101%) 30px 50%/calc(51% - 30px) 120px repeat-y,
+		radial-gradient(41.38px at calc(100% - 58.5px) 50%,#000 99%,#0000 101%) 100% calc(50% - 60px)/51% 120px repeat-y,
+    radial-gradient(41.38px at calc(100% + 28.5px) 50%,#0000 99%,#000 101%) calc(100% - 30px) 50%/calc(51% - 30px) 120px repeat-y;
+  -webkit-mask: var(--mask);
+          mask: var(--mask);
+}
+
+.leftWave {
+  --mask:
+    radial-gradient(34.99px at 48px 50%,#000 99%,#0000 101%) 0 calc(50% - 60px)/100% 120px,
+    radial-gradient(34.99px at -18px 50%,#0000 99%,#000 101%) 30px 50%/100% 120px repeat-y;
+  -webkit-mask: var(--mask);
+          mask: var(--mask);
+}
+
+.input-style {
+  @apply w-full p-3 rounded-xl border border-gray-500 focus:outline-none focus:ring-2 focus:ring-black;
+}
+
+::-webkit-scrollbar{
+    width: 5px;
+    height: 5px;
+    background-color: #F8F8F8;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: #999;
+    border-radius: 10%;
+}
